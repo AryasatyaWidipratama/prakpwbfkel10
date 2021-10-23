@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePelaporanTable extends Migration
+class CreateKotaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreatePelaporanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pelaporan', function (Blueprint $table) {
-            $table->id();
+        Schema::create('kota', function (Blueprint $table) {
+            $table->increments('id_kota');
+            $table->integer('id_provinsi')->unsigned();
+            $table->foreign('id_provinsi')->references('id_provinsi')->on('provinsi');
+            $table->string('nama_kota');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreatePelaporanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelaporan');
+        Schema::dropIfExists('kota');
     }
 }
