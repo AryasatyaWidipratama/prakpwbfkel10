@@ -53,6 +53,15 @@
                                             <input type="text"  class="form-control" name="nama_provinsi" placeholder="Masukkan nama"/>
                                     </div>
                                 </div>      
+
+                                <div class="form-group">
+                                    <label for="edit">Edit</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="edit" placeholder="edit"/>
+                                    </div>
+                                </div>
+                                
                             <button type="submit" class="btn btn-success">Save</button>
                     </form>
                     </div>

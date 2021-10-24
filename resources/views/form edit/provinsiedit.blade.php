@@ -7,7 +7,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Data Provinsi</h1>
+                <h1>Province Data</h1>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
 <div class="content mt-3">
  
     <div class="animated fadeIn">
-        List of Provinsi
+   
 
         <div class="card">
             <div class="card-header">
@@ -41,20 +41,22 @@
                 </div>
             </div>
             <div class="card-body">
-                
+                @foreach($provinsi as $s)
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
-                                <form action="{{ url('provinsi/store') }}" method="post">
+                                <form action="{{ url('provinsi/provinsiupdate') }}" method="post">
                                     @csrf
                                 <div class="form-group">
                                     <label for="nama_provinsi">Nama Provinsi</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                            <input type="text"  class="form-control" name="nama_provinsi" placeholder="Masukkan nama"/>
+                                            <input type="text" class="form-control" name="nama_provinsi" value="{{ $s->nama_provinsi }}" placeholder="Masukkan nama provinsi"/>
                                     </div>
-                                </div>      
-                            <button type="submit" class="btn btn-success">Save</button>
+                                </div>
+        
+                        <button type="submit" class="btn btn-success">Save</button>
                     </form>
+                    @endforeach
                     </div>
                 </div>   
             

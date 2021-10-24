@@ -47,10 +47,10 @@
                                 <form action="{{ url('role/store') }}" method="post">
                                     @csrf
                                 <div class="form-group">
-                                    <label for="nama_role">Nama Role</label>
+                                    <label for="role">Role</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                            <input type="text"  class="form-control" name="nama_role" placeholder="Masukkan nama"/>
+                                            <input type="text"  class="form-control" name="role" placeholder="Masukkan role"/>
                                     </div>
                                 </div>
         
@@ -58,7 +58,7 @@
                                     <label for="edit">Edit</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="edit" placeholder="Masukkan Email"/>
+                                            <input type="text" class="form-control" name="edit" placeholder="edit"/>
                                     </div>
                                 </div>
                                         

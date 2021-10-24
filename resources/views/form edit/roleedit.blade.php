@@ -7,7 +7,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Data Table</h1>
+                <h1>Role Data</h1>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
 <div class="content mt-3">
  
     <div class="animated fadeIn">
-        List of Role
+   
 
         <div class="card">
             <div class="card-header">
@@ -41,29 +41,22 @@
                 </div>
             </div>
             <div class="card-body">
-                
+                @foreach($role as $s)
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
-                                <form action="{{ url('role/store') }}" method="post">
+                                <form action="{{ url('role/roleupdate') }}" method="post">
                                     @csrf
                                 <div class="form-group">
-                                    <label for="nama_role">Nama Role</label>
+                                    <label for="role">Nama Role</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                            <input type="text"  class="form-control" name="nama_role" placeholder="Masukkan nama"/>
+                                            <input type="text"  class="form-control" name="role" value="{{ $s->role }}" placeholder="Masukkan role"/>
                                     </div>
-                                </div>
+                                </div>                             
         
-                                <div class="form-group">
-                                    <label for="edit">Edit</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="edit" placeholder="Masukkan Email"/>
-                                    </div>
-                                </div>
-                                        
                         <button type="submit" class="btn btn-success">Save</button>
                     </form>
+                    @endforeach
                     </div>
                 </div>   
             

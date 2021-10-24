@@ -50,7 +50,7 @@
                                     <label for="nama_user">Nama User</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text"  class="form-control" name="nama_user" value="{{ $s->nama_user }}" placeholder="Masukkan nama"/>
+                                            <input type="text"  class="form-control" name="nama_user" value="{{ $s->nama_user }}" placeholder="Masukkan nama"/>
                                     </div>
                                 </div>
         
