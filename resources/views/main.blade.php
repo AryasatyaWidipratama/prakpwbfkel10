@@ -36,19 +36,35 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ url('home') }}"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
+                        <a href="{{ url('') }}"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
                     </li>
                     <li>
                         <a href="{{ url('user') }}"> <i class="menu-icon fa fa-table"></i>User </a>
                     </li>
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-table"></i>Program </a>
+                        <a href="{{ url('role') }}"> <i class="menu-icon fa fa-table"></i>Role </a>
                     </li>
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-table"></i>Program </a>
+                        <a href="{{ url('provinsi') }}"> <i class="menu-icon fa fa-table"></i>Provinsi </a>
                     </li>
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-table"></i>Program </a>
+                        <a href="{{ url('kategori') }}"> <i class="menu-icon fa fa-table"></i>Kategori Bencana </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('kota') }}"> <i class="menu-icon fa fa-table"></i>Kota </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('kecamatan') }}"> <i class="menu-icon fa fa-table"></i>Kecamatan </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url('bencana') }}"> <i class="menu-icon fa fa-table"></i>Bencana </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('pelaporan') }}"> <i class="menu-icon fa fa-table"></i>Pelaporan </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('detail') }}"> <i class="menu-icon fa fa-table"></i>Detail Korban </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

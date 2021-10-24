@@ -7,7 +7,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>User Data</h1>
+                <h1>Data Table</h1>
             </div>
         </div>
     </div>
@@ -27,15 +27,14 @@
 <div class="content mt-3">
  
     <div class="animated fadeIn">
-        List of user data
 
         <div class="card">
             <div class="card-header">
                 <div class="pull-left">
-                    <strong>Data User</strong>
+                    <strong>Detail Korban</strong>
                 </div>
                 <div class="pull-right">
-                    <a href="{{ url('user/tambahuser') }}" class="btn btn-success btn-sm">
+                    <a href="" class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Add
                     </a>
                 </div>
@@ -43,30 +42,28 @@
             <div class="card-body table-responsive">
                 <table class="table table-bordered">
                     <thead>
-                        <th>ID USER</th>
+                        <th> Id Detail Korban </th>
+                        <th> Id Pelaporan</th>
+                        <th> NIK </th>
                         <th> Nama </th>
-                        <th> Email </th>
-                        <th> Tanggal Lahir </th>
+                        <th> Umur </th>
+                        <th> Kondisi </th>
                         <th> Edit </th>
                     </thead>
                     <tbody>
-                        @foreach($user as $p)
+                        @foreach($detailkorban as $p)
                         <tr>
                             
-                            <td>{{ $p->id_user }}</td>
-                            <td>{{ $p->nama_user }}</td>
-                            <td>{{ $p->email }}</td>
-                            <td>{{ $p->tgl_lahir }}</td>
+                            <td>{{ $p->id_detailkorban }}</td>
+                            <td>{{ $p->id_pelaporan }}</td>
+                            <td>{{ $p->nik }}</td>
+                            <td>{{ $p->nama }}</td>
+                            <td>{{ $p->umur }}</td>
+                            <td>{{ $p->kondisi }}</td>
                             <td class="text-center">
-                                <a href="{{ url('user/edit/'.$p->id_user) }}" class="btn btn-primary btn-sm">
+                                <a href="" class="btn btn-primary btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <form action="">
-                                    @method('delete')
-                                    @csrf
-                                    <button class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i></button>
-                                </form>
                             </td>
 
                                 </tr>
