@@ -36,9 +36,9 @@ class UserController extends Controller
         return view('form edit.useredit',['user' => $user]);
     }
 
-    public function userupdate(Request $request,$id_user)
+    public function userupdate(Request $request)
 {
-    DB::table('user')->where('id_user',$id_user)->update([
+    DB::table('user')->where('id_user',$request->id_user)->update([
         'nama_user' => $request->nama_user,
         'password' => $request->password,
         'email' => $request->email,

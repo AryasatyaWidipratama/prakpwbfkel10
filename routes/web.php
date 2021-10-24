@@ -55,4 +55,4 @@ Route::get('user',[UserController::class,'user']);
 Route::get('user/tambahuser',[UserController::class,'useradd']);
 Route::post('user/store',[UserController::class,'userstore']);
 Route::get('user/edit/{id}',[UserController::class,'useredit']);
-Route::post('user/update/{id}',[UserController::class,'userupdate']);
+Route::post('user/userupdate',[UserController::class,'userupdate']);

@@ -44,8 +44,7 @@
                 @foreach($user as $s)
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
-                                <form action="{{ url('user') }}" method="get">
-
+                                <form action="{{ url('user/userupdate') }}" method="post">
                                     @csrf
                                 <div class="form-group">
                                     <label for="nama_user">Nama User</label>
