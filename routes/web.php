@@ -31,6 +31,20 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/login', function () {
+    return view('login');
+   
+});
+
+Route::get('/register', function () {
+    return view('register');
+   
+});
+
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
+   
+});
 
 Route::get('kecamatan',[KecamatanController::class,'kecamatan']);
 
@@ -40,10 +54,9 @@ Route::get('kategori',[KategoriController::class,'kategori']);
 
 Route::get('kota',[KotaController::class,'kota']);
 
-Route::get('detail',[DetailController::class,'detail']);
+Route::get('/detail','App\Http\Controllers\detailController@index');
 
 Route::get('pelaporan',[PelaporanController::class,'pelaporan']);
-
 
 Route::get('provinsi',[ProvinsiController::class,'provinsi']);
 
