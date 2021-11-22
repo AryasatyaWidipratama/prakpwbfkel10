@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Disport - Dashboard</title>
+    <title>Disport - {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="css/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -51,39 +51,37 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Tabel
+                Data
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Sidebar -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaster"
+                    aria-expanded="true" aria-controls="collapseMaster">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Master Data</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <span>Data Master</span>
+                </a>                
+                <div id="collapseMaster" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="table/bencana" >Data Bencana </a>
-                        <a class="collapse-item" href="table/detail" >Data Korban</a>
-                        <a class="collapse-item" href="table/pelaporan" >Data Pelaporan</a>
+                        <a class="collapse-item" href="{{ url('user') }}" >User</a>
+                        <a class="collapse-item" href="{{ url('role') }}" >Role</a>
+                        <a class="collapse-item" href="{{ url('provinsi') }}" >Provinsi</a>
+                        <a class="collapse-item" href="{{ url('kategori') }}" >Kategori Bencana</a>
                     </div>
                 </div>
-            </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTransaksi"
+                    aria-expanded="true" aria-controls="collapseTransaksi">
                     <i class="fas fa-fw fa-file"></i>
-                    <span>Master Laporan</span>
+                    <span>Data Transaksi</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseTransaksi" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <a class="collapse-item" href="{{ url('pelaporan') }}" >Pelaporan </a>
+                        <a class="collapse-item" href="{{ url('bencana') }}" >Bencana </a>
+                        <a class="collapse-item" href="{{ url('detail') }}" >Detail Korban </a>
+                        <a class="collapse-item" href="{{ url('kota') }}" >Kota </a>
+                        <a class="collapse-item" href="{{ url('kecamatan') }}" > Kecamatan </a>
                     </div>
                 </div>
             </li>
@@ -144,7 +142,7 @@
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-success" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -169,7 +167,7 @@
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
+                                            <button class="btn btn-success" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
@@ -211,39 +209,6 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Tidak Ada Pesan</a>
                             </div>
                         </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item Login -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle" src="public/img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
                     </ul>
 
                 </nav>
@@ -256,7 +221,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="/pelaporan" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
-                            <i class="fas fa-file fa-sm text-white-50"></i> Buat Laporan
+                            <i class="fas fa-download fa-sm text-white-50"></i> Buat Laporan
                         </a>
                     </div>
 
@@ -325,54 +290,7 @@
                                 </div>
                             </div>
                         </div>                        
-                    </div>                     
-                           
-                        
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-8 mb-4">                           
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Berita Terkini</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="https://cdn1-production-images-kly.akamaized.net/RgcOXt65etfBHpVUorwhverOznU=/1231x710/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3419930/original/073760400_1617603429-AP21095196320960.jpg"
-                                            alt="...">
-                                    </div>
-                                    <p>Nusa Tenggara Timur (NTT) diterjang banjir bandang dan tanah longsor pada 
-                                        Minggu dini hari, 4 April 2021, sekitar pukul 01.00 WITA. 
-                                        Sejak beberapa hari lalu, wilayah tersebut memang diterjang cuaca ekstrem.</p>
-                                    <a target="_blank" rel="nofollow" href="berita">
-                                        Baca Selengkapnya&rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Content Column -->
-                        <div class="col-lg-4 mb-4"> 
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Tentang Kita</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>Disport adalah aplikasi web yang mempunyai tujuan untuk menampung semua laporan bencana
-                                        yang ada di Indonesia.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    </div>                    
                 </div>
                 <!-- /.container-fluid -->
 
@@ -429,13 +347,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="js/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

@@ -1,11 +1,34 @@
-@extends('layout.layout')
+@extends('layout.dashboard')
+
+@section('title','dashboard')
+
+@section('breadcrumbs')
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li class="active"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
 
 @section('content')
-
-<main>
-    <div class="container-fluid px-4">
-        <h1 class="mt-4">Home</h1>
+<div class="content mt-3">
+ 
+    <div class="animated fadeIn">
+        DESKRIPSI
     </div>
-</main>
-    
+
+</div>
 @endsection
